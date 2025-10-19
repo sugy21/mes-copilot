@@ -1,0 +1,20 @@
+fastapi              # 비동기 기반의 고성능 웹 프레임워크 (API 서버 핵심)
+uvicorn[standard]    # ASGI 서버 (FastAPI 실행용, reload 기능 지원)
+sqlmodel             # SQLAlchemy + Pydantic 결합 ORM (모델/스키마 통합)
+sqlalchemy           # 데이터베이스 ORM 핵심 라이브러리
+pydantic             # 데이터 검증 및 스키마 정의 (FastAPI 요청/응답 모델)
+alembic              # DB 마이그레이션 도구 (버전 관리)
+httpx                # 비동기 HTTP 클라이언트 (외부 API 연동)
+pandas               # 데이터 분석 및 CSV 처리용
+redis                # 캐시/세션/비동기 큐 저장소
+celery               # 비동기 작업 큐(백그라운드 태스크 실행)
+bcrypt               # 비밀번호 해싱용 라이브러리
+python-jose          # JWT 발급 및 검증 (인증/인가용)
+python-dotenv        # .env 파일에서 환경변수 로드
+pytest               # 단위 테스트 프레임워크
+pytest-asyncio       # 비동기 코드용 pytest 확장
+pytest-cov           # 테스트 커버리지 측정 도구
+black                # 코드 포매터 (자동 정렬)
+flake8               # 코드 린터 (스타일 및 오류 검사)
+mypy                 # 정적 타입 검사기
+pre-commit           # 커밋 전 자동 검사 훅 관리 도구

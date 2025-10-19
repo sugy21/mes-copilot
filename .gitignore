@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+env/
+.venv/
+
+# Build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Alembic
+alembic/versions/
+*.db
+*.sqlite3
+
+# Test & Coverage
+.coverage
+coverage.xml
+htmlcov/
+pytest_cache/
+.cache/
+
+# Logs / Temp
+*.log
+logs/
+tmp/
+temp/
+
+# Environment & Secrets
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+
+# IDE / OS / Docker
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+docker-compose.override.yml
