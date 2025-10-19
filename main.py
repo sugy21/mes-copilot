@@ -1,5 +1,8 @@
 from fastapi import FastAPI
+from database import engine, Base
 from routers import orders, work_results
+
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="MES Copilot Demo")
 
