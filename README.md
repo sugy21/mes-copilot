@@ -7,12 +7,14 @@
 
 ## 📁 폴더 구조
 
+```text
 app/
 ├─ main.py
 ├─ routers/
 ├─ services/
 ├─ models/
 └─ database/
+```
 
 ## ⚙️ 로컬 실행 (1~4차시)
 ```bash
