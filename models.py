@@ -18,7 +18,7 @@ class WorkResult(Base):
     order_id = Column(Integer, ForeignKey("orders.id"))
     status = Column(String, nullable=False)
     worker = Column(String, nullable=True)
+    inspector = Column(String, nullable=True)  # 추가된 필드
     timestamp = Column(DateTime, default=datetime.datetime.utcnow)
 
     order = relationship("Order", back_populates="results")
-
