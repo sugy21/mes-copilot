@@ -31,11 +31,8 @@ app.add_middleware(
 # Add custom middleware
 app.add_middleware(LoggingMiddleware)
 
-# Add custom middleware
-app.add_middleware(LoggingMiddleware)
-
 # Add JWT middleware
-app.add_middleware(JWTMiddleware)
+# app.add_middleware(JWTMiddleware)
 
 
 app.include_router(orders.router)
