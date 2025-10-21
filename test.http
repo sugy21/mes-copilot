@@ -1,0 +1,85 @@
+###
+# 1. POST /orders - 주문 생성 테스트 데이터 (5개)
+# 라우터: routers.py @router.post("/")
+# 데이터: 쿼리 매개변수로 전달 (order_name, product_code)
+###
+
+# Order 1: 표준 노트북 주문
+POST http://localhost:8080/orders?order_name=Standard%20Laptop%20Order&product_code=LAP-STD-001
+Content-Type: application/json
+# 요청 본문은 비어있거나 {}여야 합니다.
+
+{}
+
+###
+# Order 2: 맞춤형 워크스테이션 주문
+POST http://localhost:8080/orders?order_name=Custom%20Workstation%20Build&product_code=PC-CUST-999
+Content-Type: application/json
+
+{}
+
+###
+# Order 3: 서버 부품 긴급 주문
+POST http://localhost:8080/orders?order_name=Server%20Parts%20Emergency&product_code=MEM-DDR5-64
+Content-Type: application/json
+
+{}
+
+###
+# Order 4: 대량 마우스 구매 주문
+POST http://localhost:8080/orders?order_name=Bulk%20Mouse%20Purchase&product_code=ACC-MOUSE-100
+Content-Type: application/json
+
+{}
+
+###
+# Order 5: 소프트웨어 라이선스 주문
+POST http://localhost:8080/orders?order_name=Software%20License%20Renewal&product_code=SW-WIN-PRO
+Content-Type: application/json
+
+{}
+
+
+### -------------------------------------------
+# 2. POST /work-results - 작업 결과 생성 테스트 데이터 (5개)
+# 라우터: work_results.py @router.post("/")
+# 데이터: 쿼리 매개변수로 전달 (order_id, status, worker)
+# 주의: order_id는 DB에 존재하는 값(예: 1, 2, 3...)으로 수정해야 합니다.
+###
+
+# Result 1: Order 1 (ID: 1 가정) - 작업 완료
+POST http://localhost:8080/work-results?order_id=1&status=Completed&worker=Alice
+Content-Type: application/json
+
+{}
+
+###
+# Result 2: Order 2 (ID: 2 가정) - 작업 진행 중
+POST http://localhost:8080/work-results?order_id=2&status=In%20Progress&worker=Bob
+Content-Type: application/json
+
+{}
+
+###
+# Result 3: Order 3 (ID: 3 가정) - 작업 실패 (부품 부족)
+POST http://localhost:8080/work-results?order_id=3&status=Failed&worker=Charlie
+Content-Type: application/json
+
+{}
+
+###
+# Result 4: Order 4 (ID: 4 가정) - 작업 완료 (대량 작업)
+POST http://localhost:8080/work-results?order_id=4&status=Completed&worker=Alice
+Content-Type: application/json
+
+{}
+
+###
+# Result 5: Order 5 (ID: 5 가정) - 작업 보류
+POST http://localhost:8080/work-results?order_id=5&status=On%20Hold&worker=Daniel
+Content-Type: application/json
+
+{}
+
+###
+GET http://localhost:8080/orders/

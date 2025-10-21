@@ -18,3 +18,4 @@ black                # 코드 포매터 (자동 정렬)
 flake8               # 코드 린터 (스타일 및 오류 검사)
 mypy                 # 정적 타입 검사기
 pre-commit           # 커밋 전 자동 검사 훅 관리 도구
+jwt                  # JSON Web Token 라이브러리
