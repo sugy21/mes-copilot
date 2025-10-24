@@ -48,3 +48,6 @@ app.include_router(weather_router)
 def read_root():
     logger.debug("main endpoint")
     return {"message": "MES Copilot API is running"}
+
+
+# 테스트 커밋
