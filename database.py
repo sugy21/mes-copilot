@@ -9,11 +9,13 @@ engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 Base = declarative_base()
 
+
 @event.listens_for(Engine, "connect")
 def _set_sqlite_pragma(dbapi_conn, _):
     cur = dbapi_conn.cursor()
     cur.execute("PRAGMA foreign_keys=ON")
     cur.close()
+
 
 def get_db():
     db = SessionLocal()
@@ -21,4 +23,3 @@ def get_db():
         yield db
     finally:
         db.close()
-

@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 from database import Base
 import datetime
 
+
 class Order(Base):
     __tablename__ = "orders"
     id = Column(Integer, primary_key=True, index=True)
@@ -11,6 +12,7 @@ class Order(Base):
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
 
     results = relationship("WorkResult", back_populates="order")
+
 
 class WorkResult(Base):
     __tablename__ = "work_results"

@@ -6,12 +6,14 @@ from routers import orders, work_results
 from routers import data_summary
 from routers.weather import router as weather_router
 from middlewares.logging_middleware import LoggingMiddleware
-from middlewares.jwt_middleware import JWTMiddleware
+
+# from middlewares.jwt_middleware import JWTMiddleware
+
+unused_var = 10
 
 # 로깅 설정
 logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
 
